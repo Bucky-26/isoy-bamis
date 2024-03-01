@@ -52,6 +52,27 @@ namespace isoy_bamis
 
         private void button5_Click(object sender, EventArgs e)
         {
+            frm_maintenance frm_off = new frm_maintenance();
+            frm_off.TopLevel = false;
+            pnl_body.Controls.Add(frm_off);
+            frm_off.BringToFront();
+            frm_off.load_data();
+            frm_off.Show();
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
 
         }
     }

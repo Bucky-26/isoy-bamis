@@ -1,0 +1,1 @@
+Data Source=1SOY\SQLEXPRESS;Initial Catalog=isoy-bamis;Integrated Security=True;

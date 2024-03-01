@@ -55,11 +55,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="crud.cs" />
+    <Compile Include="declares.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_add_info.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_add_info.Designer.cs">
+      <DependentUpon>frm_add_info.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_maitenance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_maitenance.Designer.cs">
+      <DependentUpon>frm_maitenance.cs</DependentUpon>
     </Compile>
     <Compile Include="frm_docs.cs">
       <SubType>Form</SubType>
@@ -71,6 +85,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_add_info.resx">
+      <DependentUpon>frm_add_info.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_maitenance.resx">
+      <DependentUpon>frm_maitenance.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_docs.resx">
       <DependentUpon>frm_docs.cs</DependentUpon>

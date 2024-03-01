@@ -33,13 +33,13 @@ namespace isoy_bamis
             this.metroTabControl1 = new MetroFramework.Controls.MetroTabControl();
             this.metroTabPage1 = new MetroFramework.Controls.MetroTabPage();
             this.tab_pnl_body = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
             this.metroTabControl1.SuspendLayout();
             this.metroTabPage1.SuspendLayout();
             this.tab_pnl_body.SuspendLayout();
@@ -85,28 +85,29 @@ namespace isoy_bamis
             this.tab_pnl_body.Size = new System.Drawing.Size(919, 102);
             this.tab_pnl_body.TabIndex = 2;
             // 
-            // button1
+            // button6
             // 
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(23, 13);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(87, 71);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "BRGY CLEARANCE";
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
+            this.button6.Location = new System.Drawing.Point(824, 13);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(87, 71);
+            this.button6.TabIndex = 7;
+            this.button6.Text = "CLOSE";
+            this.button6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
-            // button2
+            // button5
             // 
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.Location = new System.Drawing.Point(116, 13);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(87, 71);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "FRANCHISE";
-            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button2.UseVisualStyleBackColor = true;
+            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
+            this.button5.Location = new System.Drawing.Point(395, 13);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(87, 71);
+            this.button5.TabIndex = 6;
+            this.button5.Text = "RESIDENCY";
+            this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.button5.UseVisualStyleBackColor = true;
             // 
             // button3
             // 
@@ -130,6 +131,29 @@ namespace isoy_bamis
             this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.button4.UseVisualStyleBackColor = true;
             // 
+            // button2
+            // 
+            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
+            this.button2.Location = new System.Drawing.Point(116, 13);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(87, 71);
+            this.button2.TabIndex = 3;
+            this.button2.Text = "FRANCHISE";
+            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.Location = new System.Drawing.Point(23, 13);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(87, 71);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "BRGY CLEARANCE";
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // panel1
             // 
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -137,29 +161,6 @@ namespace isoy_bamis
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(927, 443);
             this.panel1.TabIndex = 2;
-            // 
-            // button5
-            // 
-            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
-            this.button5.Location = new System.Drawing.Point(395, 13);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(87, 71);
-            this.button5.TabIndex = 6;
-            this.button5.Text = "RESIDENCY";
-            this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // button6
-            // 
-            this.button6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
-            this.button6.Location = new System.Drawing.Point(824, 13);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(87, 71);
-            this.button6.TabIndex = 7;
-            this.button6.Text = "CLOSE";
-            this.button6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button6.UseVisualStyleBackColor = true;
             // 
             // frm_docs
             // 
