@@ -75,5 +75,9 @@ namespace isoy_bamis
         {
 
         }
+
+        private void button8_Click(object sender, EventArgs e)
+            this.Dispose();
+        }
     }
 }
