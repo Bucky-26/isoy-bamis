@@ -48,7 +48,7 @@ namespace isoy_bamis
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CLM_STATUS = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.edit = new System.Windows.Forms.DataGridViewImageColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.delete = new System.Windows.Forms.DataGridViewImageColumn();
             this.metroTabControl1.SuspendLayout();
             this.metroTabPage1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -139,7 +139,7 @@ namespace isoy_bamis
             this.Column6,
             this.CLM_STATUS,
             this.edit,
-            this.Column8});
+            this.delete});
             this.dataGridView1.EnableHeadersVisualStyles = false;
             this.dataGridView1.GridColor = System.Drawing.Color.White;
             this.dataGridView1.Location = new System.Drawing.Point(-4, 37);
@@ -257,13 +257,13 @@ namespace isoy_bamis
             this.edit.Name = "edit";
             this.edit.Width = 5;
             // 
-            // Column8
+            // delete
             // 
-            this.Column8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column8.HeaderText = "";
-            this.Column8.Image = ((System.Drawing.Image)(resources.GetObject("Column8.Image")));
-            this.Column8.Name = "Column8";
-            this.Column8.Width = 5;
+            this.delete.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.delete.HeaderText = "";
+            this.delete.Image = ((System.Drawing.Image)(resources.GetObject("delete.Image")));
+            this.delete.Name = "delete";
+            this.delete.Width = 5;
             // 
             // frm_maintenance
             // 
@@ -305,6 +305,6 @@ namespace isoy_bamis
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn CLM_STATUS;
         private System.Windows.Forms.DataGridViewImageColumn edit;
-        private System.Windows.Forms.DataGridViewImageColumn Column8;
+        private System.Windows.Forms.DataGridViewImageColumn delete;
     }
 }

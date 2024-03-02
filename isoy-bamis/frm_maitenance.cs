@@ -23,13 +23,44 @@ namespace isoy_bamis
             con = new SqlConnection(crud.connection);
 
         }
-        public void update()
+        public void update(int eColumnIndex, int eRowIndex)
+        {
+            
+            try
+            {
+                string clm_name = dataGridView1.Columns[eColumnIndex].Name;
+                frm_add_info _form = new frm_add_info(this);
+                _form.btn_save.Enabled = false;
+                _form._ID = dataGridView1.Rows[eRowIndex].Cells[0].Value.ToString();
+                _form.txt_name.Text = dataGridView1.Rows[eRowIndex].Cells[1].Value.ToString();
+                _form.txt_cm.Text = dataGridView1.Rows[eRowIndex].Cells[2].Value.ToString();
+                _form.txt_pos.Text = dataGridView1.Rows[eRowIndex].Cells[3].Value.ToString();
+                _form.dp_ts.Value = DateTime.Parse(dataGridView1.Rows[eRowIndex].Cells[4].Value.ToString());
+                _form.dt_te.Value = DateTime.Parse(dataGridView1.Rows[eRowIndex].Cells[5].Value.ToString());
+                _form.txt_tstats.Text = dataGridView1.Rows[eRowIndex].Cells[6].Value.ToString();
+                _form.btn_update.Enabled = true;
+                _form.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, declares._title + "[error]", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            }
+        public void delete_data(string id)
         {
             try
             {
-
-            }catch(Exception ex)
+                con.Open();
+                // Replace "ID" with the appropriate primary key column name in your TBL_OFFICIALS table
+                com = new SqlCommand("DELETE FROM TBL_OFFICIALS WHERE ID = @id", con);
+                com.Parameters.AddWithValue("@id", id);
+                com.ExecuteNonQuery();
+                con.Close();
+                load_data();
+            }
+            catch (Exception ex)
             {
+                con.Close();
                 MessageBox.Show(ex.Message, declares._title + "[error]", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
@@ -53,28 +84,31 @@ namespace isoy_bamis
         {
             try
             {
-                string clm_name = dataGridView1.Columns[e.ColumnIndex].Name;
-                if (clm_name == "edit")
-                   {
-                    frm_add_info _form = new frm_add_info(this);
-                    _form.btn_save.Enabled = false;
-                    _form._ID = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
-                    _form.txt_name.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
-                    _form.txt_cm.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
-                    _form.txt_pos.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
-                    _form.dp_ts.Value = DateTime.Parse(dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString());
-                    _form.dt_te.Value = DateTime.Parse(dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString());
-                    _form.txt_tstats.Text = dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString();
-                    _form.btn_update.Enabled = true;
-                    _form.ShowDialog();
-
+                if (e.RowIndex >= 0)
+                {
+                    string clm_name = dataGridView1.Columns[e.ColumnIndex].Name;
+                    switch (clm_name)
+                    {
+                        case "edit":
+                            update(e.ColumnIndex, e.RowIndex);
+                            break;
+                        case "delete":
+                            string id = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+                            DialogResult result = MessageBox.Show("Are you sure you want to delete this record?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                            if (result == DialogResult.Yes)
+                            {
+                                delete_data(id);
+                                MessageBox.Show("Record deleted successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            }
+                            break;
+                    }
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, declares._title + "[error]", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-
             }
+
         }
         public void load_data()
         {
