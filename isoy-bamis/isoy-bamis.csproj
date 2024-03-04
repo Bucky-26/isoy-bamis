@@ -69,6 +69,12 @@
     <Compile Include="frm_add_info.Designer.cs">
       <DependentUpon>frm_add_info.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_add_purok.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_add_purok.Designer.cs">
+      <DependentUpon>frm_add_purok.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_maitenance.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,6 +94,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_add_info.resx">
       <DependentUpon>frm_add_info.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_add_purok.resx">
+      <DependentUpon>frm_add_purok.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_maitenance.resx">
       <DependentUpon>frm_maitenance.cs</DependentUpon>

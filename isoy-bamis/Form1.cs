@@ -57,6 +57,7 @@ namespace isoy_bamis
             pnl_body.Controls.Add(frm_off);
             frm_off.BringToFront();
             frm_off.load_data();
+            frm_off.load_purok();
             frm_off.Show();
 
         }
@@ -77,6 +78,7 @@ namespace isoy_bamis
         }
 
         private void button8_Click(object sender, EventArgs e)
+        {
             this.Dispose();
         }
     }

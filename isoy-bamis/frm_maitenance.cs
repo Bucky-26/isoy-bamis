@@ -23,6 +23,7 @@ namespace isoy_bamis
             con = new SqlConnection(crud.connection);
 
         }
+
         public void update(int eColumnIndex, int eRowIndex)
         {
             
@@ -142,6 +143,86 @@ namespace isoy_bamis
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            frm_add_purok new_form = new frm_add_purok(this);
+            new_form.ShowDialog(); 
+        }
+        public void load_purok()
+        {
+            try
+            {
+                dataGridView2.Rows.Clear();
+                con.Open();
+                com = new SqlCommand("SELECT * FROM tbl_purok",con);
+                dataread = com.ExecuteReader();
+                while (dataread.Read())
+                {
+                    dataGridView2.Rows.Add(dataread[0].ToString(), dataread[1].ToString(), dataread[2].ToString(), dataread[3].ToString());
+
+                }
+
+                dataGridView2.ClearSelection();
+                dataread.Close();
+                con.Close();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, declares._title + "[error]", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+            }
+        }
+        public void delete_purok(string id)
+        {
+            con.Open();
+            com = new SqlCommand("Delete From tbl_purok Where _ID = @id", con);
+            com.Parameters.AddWithValue("@id", id);
+            com.ExecuteNonQuery();
+            load_purok();
+            con.Close();
+        }
+        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+
+            string col_name = dataGridView2.Columns[e.ColumnIndex].Name;
+                switch (col_name)
+                {
+                    case "_edit":
+                        frm_add_purok _new_purok = new frm_add_purok(this);
+                    _new_purok._ID = dataGridView2.Rows[e.RowIndex].Cells[0].Value.ToString();
+
+                    _new_purok.txt_purok.Text = dataGridView2.Rows[e.RowIndex].Cells[1].Value.ToString();
+                        _new_purok.txt_pres.Text = dataGridView2.Rows[e.RowIndex].Cells[2].Value.ToString();
+                        _new_purok.cmbx_stats.Text = dataGridView2.Rows[e.RowIndex].Cells[3].Value.ToString();
+                    _new_purok.btn_update.Enabled = true;
+                    _new_purok.btn_save.Enabled = false;
+                  //  MessageBox.Show(dataGridView2.Rows[e.RowIndex].Cells[0].Value.ToString());
+                        _new_purok.ShowDialog();
+                        break;
+                    case "_delete":
+
+                    DialogResult result = MessageBox.Show("Are you sure you want to delete this record?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (result == DialogResult.Yes)
+                    {
+
+                        string id = dataGridView2.Rows[e.RowIndex].Cells[0].Value.ToString();
+                        delete_purok(id);
+                        MessageBox.Show("Record deleted successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        con.Close();
+                    }
+                    break;
+
+                }
+            
         }
     }
 }

@@ -172,4 +172,49 @@
         UHbojQdtAAAAAElFTkSuQmCC
 </value>
   </data>
+  <metadata name="id.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="dataGridViewTextBoxColumn2.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="dataGridViewTextBoxColumn3.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="dataGridViewTextBoxColumn4.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="_edit.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="_edit.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
+        dgAAAHYBTnsmCAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAF3SURBVDhPfVLL
+        TgIxFJ2N+iOA8nDF0l/RHzAujP+BUTEajNFhJDFha6KiiI9fAHSnYtxqAm0DDh2uvX1gZ3DmJCdpbs+5
+        j/Y6USyd0uVFj+5mqrQjSDU76SrdyXqkoGWzSO3BQtpjB0IcCEIMecZl+/k6zGubAprFZSsiTuJdKEna
+        JYf/iKbMnVHYuB9B8ZxZcVaWZpxZBJLahsu3MSBevgM7CU+5JO/oBwsZDLHyUduHzccR+IHMAeut4Z/G
+        o9tOxqVd22SI5psel6bnrwC2nkZw9T6WcaMRP9N2xCzENiJR1Oiptg0qopOoTnAgEtCBHcx6FC5ew+aH
+        Tw6FWsho2J8Z4aTra5tC84ND3mrbphwBN8wEsPX+z0RbEysblhxcT3HgGFhrDKWR+BM47vixlTV5qkZy
+        chdwPTG4Umewej0MvXQc8fulGYFrKYLNqCiBt8UKzGm7gkrCyuJSjhNDjpVnzDZwPXHD8IXVjjCizrQ0
+        nXkKx/kFHCtwNwef02QAAAAASUVORK5CYII=
+</value>
+  </data>
+  <metadata name="_delete.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="_delete.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
+        dgAAAHYBTnsmCAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAGrSURBVDhPfZM7
+        T8JQFMdZ9MPICMXRUAYH4yMxJhhHZ2cZRScVhKDxMYiJOvgJXNBEZxMjKT5BEh+DIS7SIm3o5XjOaYsX
+        qpzkl9z+z/mf3nt7GugNPaoEdVXJICVDVQyC1qxhzi3zB8wEB3U1somFNgL/gLlwjmpdmxNsjioFnyEW
+        cejVsbariftmThqzE9CYm2Ls6yvGezbi41KjcM4xO2fmbRvTo9C6OOsL1bhNbD02PIRvV7KuwJiryT+N
+        BOXk2roa2aAGt7JonRxCu/YBdvEaROUJxHOZ16RRTq5FNDq/LovWwS7Y2g1Yx3loFU4Z62gf7FIRrPyO
+        bCbqtIO6LJpbaRAPd9yo0wCN4vEecynZTHz5jmCur4ColsHay/02wLWoVsBcW5bNhBagi5DFZjIB4u2F
+        d+I1oDeL91doLiVkM16ikur6jMT34gK0P2tgbmegdXnO0Jo0ynl17KHPyLOAQ+ElGvNxACHAF6hRTmqQ
+        ZTMFhEID8igbYyNgTKrdoNYx0yijx7U74fxMvJN+P1MLyfrMctCduBerOTPCc6LVo+F058ydCAR+AHz5
+        UHbojQdtAAAAAElFTkSuQmCC
+</value>
+  </data>
 </root>
