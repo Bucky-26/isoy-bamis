@@ -45,7 +45,7 @@ namespace isoy_bamis
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_residents = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.pnl_nav_header.SuspendLayout();
@@ -143,7 +143,7 @@ namespace isoy_bamis
             this.pnl_nav.Controls.Add(this.button4);
             this.pnl_nav.Controls.Add(this.button3);
             this.pnl_nav.Controls.Add(this.button2);
-            this.pnl_nav.Controls.Add(this.button1);
+            this.pnl_nav.Controls.Add(this.btn_residents);
             this.pnl_nav.Controls.Add(this.pnl_nav_header);
             this.pnl_nav.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnl_nav.Location = new System.Drawing.Point(0, 0);
@@ -282,24 +282,25 @@ namespace isoy_bamis
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btn_residents
             // 
-            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(151)))), ((int)(((byte)(230)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.button1.Location = new System.Drawing.Point(0, 203);
-            this.button1.Name = "button1";
-            this.button1.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.button1.Size = new System.Drawing.Size(254, 37);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "      RESIDENTS RECORD";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.UseVisualStyleBackColor = true;
+            this.btn_residents.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_residents.FlatAppearance.BorderSize = 0;
+            this.btn_residents.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(151)))), ((int)(((byte)(230)))));
+            this.btn_residents.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_residents.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_residents.ForeColor = System.Drawing.Color.White;
+            this.btn_residents.Image = ((System.Drawing.Image)(resources.GetObject("btn_residents.Image")));
+            this.btn_residents.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btn_residents.Location = new System.Drawing.Point(0, 203);
+            this.btn_residents.Name = "btn_residents";
+            this.btn_residents.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btn_residents.Size = new System.Drawing.Size(254, 37);
+            this.btn_residents.TabIndex = 2;
+            this.btn_residents.Text = "      RESIDENTS RECORD";
+            this.btn_residents.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_residents.UseVisualStyleBackColor = true;
+            this.btn_residents.Click += new System.EventHandler(this.btn_residents_Click);
             // 
             // label1
             // 
@@ -352,7 +353,7 @@ namespace isoy_bamis
         #endregion
         private System.Windows.Forms.Panel pnl_nav_header;
         private System.Windows.Forms.Panel pnl_nav;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_residents;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btn_logout;
         private System.Windows.Forms.Button button7;

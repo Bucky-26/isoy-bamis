@@ -177,7 +177,7 @@ namespace isoy_bamis
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, declares._title + "[error]", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
+                con.Close();
             }
         }
         public void delete_purok(string id)
@@ -186,8 +186,9 @@ namespace isoy_bamis
             com = new SqlCommand("Delete From tbl_purok Where _ID = @id", con);
             com.Parameters.AddWithValue("@id", id);
             com.ExecuteNonQuery();
-            load_purok();
             con.Close();
+            load_purok();
+
         }
         private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -215,9 +216,9 @@ namespace isoy_bamis
                     {
 
                         string id = dataGridView2.Rows[e.RowIndex].Cells[0].Value.ToString();
-                        delete_purok(id);
+                      ;
                         MessageBox.Show("Record deleted successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        con.Close();
+                        delete_purok(id);
                     }
                     break;
 

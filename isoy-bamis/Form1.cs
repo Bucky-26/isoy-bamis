@@ -81,5 +81,16 @@ namespace isoy_bamis
         {
             this.Dispose();
         }
+
+        private void btn_residents_Click(object sender, EventArgs e)
+        {
+            frm_residents new_form = new frm_residents();
+            
+            new_form.TopLevel = false;
+            pnl_body.Controls.Add(new_form);
+
+            new_form.BringToFront();
+            new_form.Show();
+        }
     }
 }

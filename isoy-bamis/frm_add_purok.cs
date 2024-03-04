@@ -52,11 +52,11 @@ namespace isoy_bamis
                 command.Parameters.AddWithValue("@pres",txt_pres.Text);
                 command.Parameters.AddWithValue("@stats", cmbx_stats.Text);
                 command.ExecuteNonQuery();
-                
+                con.Close();
+
                 MessageBox.Show("Data has been added successfully", declares._title + "[System]", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 _new_maintenance.load_purok();
                 Clear();
-                con.Close();
 
 
             }
