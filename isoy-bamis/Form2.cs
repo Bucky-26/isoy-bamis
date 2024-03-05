@@ -30,20 +30,16 @@ namespace isoy_bamis
                 int count = (int)com.ExecuteScalar();
 
                 if (count > 0)
-                {
-                    // Authentication succeeded
-                    MessageBox.Show("Login successful");
+                {                    MessageBox.Show("Login successful");
 
                 this.Hide();
 
-                // Show the main form
                 Form1 new_form = new Form1();
-                new_form.FormClosed += (s, args) => this.Close(); // Close the application when the main form is closed
+                new_form.FormClosed += (s, args) => this.Close(); 
                 new_form.Show();
             }
             else
                 {
-                    // Authentication failed
                     MessageBox.Show("Invalid username or password");
                 }
             con.Close();
