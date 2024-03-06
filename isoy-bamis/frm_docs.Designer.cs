@@ -171,6 +171,7 @@ namespace isoy_bamis
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.metroTabControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frm_docs";
             this.Text = "frm_docs";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

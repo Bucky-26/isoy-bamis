@@ -71,5 +71,10 @@ namespace isoy_bamis
         {
 
         }
+
+        private void frm_login_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

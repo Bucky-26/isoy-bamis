@@ -59,9 +59,9 @@ namespace isoy_bamis
             this.pnl_body.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnl_body.Location = new System.Drawing.Point(260, 135);
+            this.pnl_body.Location = new System.Drawing.Point(254, 135);
             this.pnl_body.Name = "pnl_body";
-            this.pnl_body.Size = new System.Drawing.Size(767, 499);
+            this.pnl_body.Size = new System.Drawing.Size(739, 459);
             this.pnl_body.TabIndex = 1;
             this.pnl_body.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
@@ -126,7 +126,7 @@ namespace isoy_bamis
             // 
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(887, 24);
+            this.pictureBox1.Location = new System.Drawing.Point(850, 24);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(131, 99);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -148,7 +148,7 @@ namespace isoy_bamis
             this.pnl_nav.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnl_nav.Location = new System.Drawing.Point(0, 0);
             this.pnl_nav.Name = "pnl_nav";
-            this.pnl_nav.Size = new System.Drawing.Size(254, 634);
+            this.pnl_nav.Size = new System.Drawing.Size(254, 594);
             this.pnl_nav.TabIndex = 1;
             this.pnl_nav.Paint += new System.Windows.Forms.PaintEventHandler(this.pnl_nav_Paint);
             // 
@@ -163,7 +163,7 @@ namespace isoy_bamis
             this.btn_logout.ForeColor = System.Drawing.Color.White;
             this.btn_logout.Image = ((System.Drawing.Image)(resources.GetObject("btn_logout.Image")));
             this.btn_logout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_logout.Location = new System.Drawing.Point(80, 591);
+            this.btn_logout.Location = new System.Drawing.Point(80, 551);
             this.btn_logout.Name = "btn_logout";
             this.btn_logout.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btn_logout.Size = new System.Drawing.Size(107, 37);
@@ -306,8 +306,11 @@ namespace isoy_bamis
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label1.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(379, 32);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label1.Location = new System.Drawing.Point(342, 32);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(502, 26);
             this.label1.TabIndex = 2;
@@ -317,8 +320,11 @@ namespace isoy_bamis
             // 
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label2.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(483, 53);
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label2.Location = new System.Drawing.Point(446, 53);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(398, 23);
             this.label2.TabIndex = 3;
@@ -329,7 +335,7 @@ namespace isoy_bamis
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1030, 634);
+            this.ClientSize = new System.Drawing.Size(993, 594);
             this.ControlBox = false;
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -337,6 +343,7 @@ namespace isoy_bamis
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pnl_body);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "Form1";
             this.Resize += new System.EventHandler(this.Form1_Resize);
