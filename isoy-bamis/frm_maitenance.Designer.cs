@@ -83,7 +83,7 @@ namespace isoy_bamis
             this.metroTabControl1.Controls.Add(this.tabPage1);
             this.metroTabControl1.Location = new System.Drawing.Point(3, 43);
             this.metroTabControl1.Name = "metroTabControl1";
-            this.metroTabControl1.SelectedIndex = 1;
+            this.metroTabControl1.SelectedIndex = 0;
             this.metroTabControl1.Size = new System.Drawing.Size(998, 461);
             this.metroTabControl1.TabIndex = 2;
             this.metroTabControl1.UseSelectable = true;
@@ -100,7 +100,7 @@ namespace isoy_bamis
             this.metroTabPage1.Name = "metroTabPage1";
             this.metroTabPage1.Size = new System.Drawing.Size(990, 419);
             this.metroTabPage1.TabIndex = 0;
-            this.metroTabPage1.Text = "DOCUMENTS";
+            this.metroTabPage1.Text = "EMPLOYEE";
             this.metroTabPage1.VerticalScrollbarBarColor = true;
             this.metroTabPage1.VerticalScrollbarHighlightOnWheel = false;
             this.metroTabPage1.VerticalScrollbarSize = 10;

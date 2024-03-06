@@ -29,7 +29,7 @@ namespace isoy_bamis
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_residents));
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_close = new System.Windows.Forms.Button();
@@ -46,8 +46,8 @@ namespace isoy_bamis
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CLM_STATUS = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.hno = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cat = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.date_of_birth = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cat = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gender = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cvstats = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.edit = new System.Windows.Forms.DataGridViewImageColumn();
@@ -119,14 +119,14 @@ namespace isoy_bamis
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.ColumnHeadersHeight = 30;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -138,8 +138,8 @@ namespace isoy_bamis
             this.Column6,
             this.CLM_STATUS,
             this.hno,
-            this.cat,
             this.date_of_birth,
+            this.cat,
             this.gender,
             this.cvstats,
             this.edit,
@@ -153,6 +153,7 @@ namespace isoy_bamis
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(1096, 431);
             this.dataGridView1.TabIndex = 4;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // panel3
             // 
@@ -195,10 +196,9 @@ namespace isoy_bamis
             // Column5
             // 
             this.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column5.HeaderText = "POSITION";
+            this.Column5.HeaderText = "FIRST NAME";
             this.Column5.Name = "Column5";
-            this.Column5.ToolTipText = "FIRST NAME";
-            this.Column5.Width = 81;
+            this.Column5.Width = 87;
             // 
             // Column4
             // 
@@ -227,19 +227,19 @@ namespace isoy_bamis
             this.hno.Name = "hno";
             this.hno.Width = 80;
             // 
-            // cat
-            // 
-            this.cat.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.cat.HeaderText = "CATEGORY";
-            this.cat.Name = "cat";
-            this.cat.Width = 89;
-            // 
             // date_of_birth
             // 
             this.date_of_birth.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.date_of_birth.HeaderText = "DATE OF BIRTH";
             this.date_of_birth.Name = "date_of_birth";
             this.date_of_birth.Width = 103;
+            // 
+            // cat
+            // 
+            this.cat.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.cat.HeaderText = "CATEGORY";
+            this.cat.Name = "cat";
+            this.cat.Width = 89;
             // 
             // gender
             // 
@@ -310,8 +310,8 @@ namespace isoy_bamis
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn CLM_STATUS;
         private System.Windows.Forms.DataGridViewTextBoxColumn hno;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cat;
         private System.Windows.Forms.DataGridViewTextBoxColumn date_of_birth;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cat;
         private System.Windows.Forms.DataGridViewTextBoxColumn gender;
         private System.Windows.Forms.DataGridViewTextBoxColumn cvstats;
         private System.Windows.Forms.DataGridViewImageColumn edit;

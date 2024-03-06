@@ -24,7 +24,7 @@ namespace isoy_bamis
 
         private void Form1_Resize(object sender, EventArgs e)
         {
-            this.Height = Screen.PrimaryScreen.Bounds.Height - 40;
+            this.Height = Screen.PrimaryScreen.Bounds.Height - 30;
             this.Width = Screen.PrimaryScreen.Bounds.Width;
             this.Left = 0;
             this.Top = 0;
@@ -90,6 +90,8 @@ namespace isoy_bamis
             pnl_body.Controls.Add(new_form);
 
             new_form.BringToFront();
+            new_form.Load_data();
+
             new_form.Show();
         }
     }
