@@ -73,7 +73,7 @@ namespace isoy_bamis
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial Rounded MT Bold", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(117, 292);
+            this.label4.Location = new System.Drawing.Point(117, 290);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(95, 24);
             this.label4.TabIndex = 4;
@@ -84,7 +84,7 @@ namespace isoy_bamis
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial Rounded MT Bold", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(67, 264);
+            this.label3.Location = new System.Drawing.Point(73, 262);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(183, 24);
             this.label3.TabIndex = 3;
@@ -95,7 +95,7 @@ namespace isoy_bamis
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(51, 232);
+            this.label2.Location = new System.Drawing.Point(53, 230);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(222, 24);
             this.label2.TabIndex = 2;
@@ -106,7 +106,7 @@ namespace isoy_bamis
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(69, 200);
+            this.label1.Location = new System.Drawing.Point(79, 200);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(166, 24);
             this.label1.TabIndex = 1;
