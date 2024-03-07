@@ -16,11 +16,20 @@ namespace isoy_bamis
         SqlConnection _con;
         SqlCommand _com;
         SqlDataReader _readData;
-        public frm_res_details()
+        frm_residents new_form;
+        string _id;
+
+       public string _ID
+        {
+            get { return _id; }
+            set { _id = value; }
+        }
+        public frm_res_details(frm_residents new_form)
         {
             _con = new SqlConnection(crud.connection);
             InitializeComponent();
             load_purok();
+            this.new_form = new_form;
         }
         private void ClearControls()
         {
@@ -78,6 +87,7 @@ namespace isoy_bamis
              
             _con.Close();
             MessageBox.Show("Resident Info has been save successfully", declares._title + "[SYSTEM]", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            new_form.Load_data();
         }
         public void load_purok()
         {

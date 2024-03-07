@@ -227,6 +227,8 @@ namespace isoy_bamis
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox1.Location = new System.Drawing.Point(832, 57);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(163, 151);
@@ -622,7 +624,6 @@ namespace isoy_bamis
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
@@ -665,5 +666,6 @@ namespace isoy_bamis
         public System.Windows.Forms.TextBox txt_cat;
         public System.Windows.Forms.TextBox txt_house;
         public System.Windows.Forms.TextBox txt_stats;
+        public System.Windows.Forms.PictureBox pictureBox1;
     }
 }
