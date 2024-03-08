@@ -17,7 +17,7 @@ namespace isoy_bamis
         SqlCommand _com;
         SqlDataReader _readData;
         frm_residents new_form;
-        string _id;
+      private  string _id;
 
        public string _ID
         {
@@ -50,6 +50,7 @@ namespace isoy_bamis
                 {
                     ((DateTimePicker)ctrl).Value = DateTime.Now;
                 }
+                pictureBox1.Image = null;
             }
         }
 
@@ -88,7 +89,104 @@ namespace isoy_bamis
             _con.Close();
             MessageBox.Show("Resident Info has been save successfully", declares._title + "[SYSTEM]", MessageBoxButtons.OK, MessageBoxIcon.Information);
             new_form.Load_data();
+            new_form.lblTotal.Text = $"({new_form.resTotal()})";
         }
+
+        /// <summary>
+        /// ////////////
+        /// 
+        /// 
+        public void res_Update()
+        {
+            // Validate all fields
+            if (string.IsNullOrWhiteSpace(txt_nid.Text) ||
+                string.IsNullOrWhiteSpace(txt_lname.Text) ||
+                string.IsNullOrWhiteSpace(txt_fname.Text) ||
+                string.IsNullOrWhiteSpace(txt_mname.Text) ||
+                string.IsNullOrWhiteSpace(txt_nname.Text) ||
+                string.IsNullOrWhiteSpace(txt_baddress.Text) ||
+                string.IsNullOrWhiteSpace(txt_age.Text) ||
+                string.IsNullOrWhiteSpace(cmbx_cs.Text) ||
+                string.IsNullOrWhiteSpace(cmbx_gender.Text) ||
+                string.IsNullOrWhiteSpace(txt_religion.Text) ||
+                string.IsNullOrWhiteSpace(txt_email.Text) ||
+                string.IsNullOrWhiteSpace(txt_contact.Text) ||
+                string.IsNullOrWhiteSpace(cmbx_vs.Text) ||
+                string.IsNullOrWhiteSpace(txt_precint.Text) ||
+                string.IsNullOrWhiteSpace(cmbx_purok.Text) ||
+                string.IsNullOrWhiteSpace(txt_occ.Text) ||
+                string.IsNullOrWhiteSpace(txt_address.Text) ||
+                string.IsNullOrWhiteSpace(txt_cat.Text) ||
+                string.IsNullOrWhiteSpace(txt_house.Text) ||
+                string.IsNullOrWhiteSpace(txt_stats.Text) ||
+                pictureBox1.Image == null)
+            {
+                MessageBox.Show("Please fill in all fields.", declares._title + "[SYSTEM]", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            MemoryStream save_img = new MemoryStream();
+            pictureBox1.Image.Save(save_img, System.Drawing.Imaging.ImageFormat.Jpeg);
+            byte[] arrImage = save_img.GetBuffer();
+            _con.Open();
+            _com = new SqlCommand(@"UPDATE _RESIDENTS 
+                            SET 
+                                _NATIONAL_ID = @NationalId, 
+                                _LAST_NAME = @LastName, 
+                                _FIRST_NAME = @FirstName, 
+                                _MIDDLE_NAME = @MiddleName, 
+                                _NICKNAME = @Nickname, 
+                                _DATE_OF_BIRTH = @DateOfBirth, 
+                                _BIRTH_PLACE = @BirthPlace, 
+                                _AGE = @Age, 
+                                _CIVIL_STATUS = @CivilStatus, 
+                                _GENDER = @Gender, 
+                                _RELIGION = @Religion, 
+                                _EMAIL = @Email, 
+                                _CONTACT_NO = @ContactNo, 
+                                _VOTER_STATS = @VoterStats, 
+                                _PRECINT_NO = @PrecintNo, 
+                                _PUROK = @Purok, 
+                                _OCCU = @Occupation, 
+                                _ADDRESS = @Address, 
+                                _CAT = @Category, 
+                                _H_NO = @HouseNo, 
+                                _STATUS = @Status, 
+                                _image = @img
+                            WHERE  _ID= @id", _con);
+            _com.Parameters.AddWithValue("@NationalId", txt_nid.Text);
+            _com.Parameters.AddWithValue("@LastName", txt_lname.Text);
+            _com.Parameters.AddWithValue("@FirstName", txt_fname.Text);
+            _com.Parameters.AddWithValue("@MiddleName", txt_mname.Text);
+            _com.Parameters.AddWithValue("@Nickname", txt_nname.Text);
+            _com.Parameters.AddWithValue("@DateOfBirth", dp_birth.Value);
+            _com.Parameters.AddWithValue("@BirthPlace", txt_baddress.Text);
+            _com.Parameters.AddWithValue("@Age", txt_age.Text);
+            _com.Parameters.AddWithValue("@CivilStatus", cmbx_cs.Text);
+            _com.Parameters.AddWithValue("@Gender", cmbx_gender.Text);
+            _com.Parameters.AddWithValue("@Religion", txt_religion.Text);
+            _com.Parameters.AddWithValue("@Email", txt_email.Text);
+            _com.Parameters.AddWithValue("@ContactNo", txt_contact.Text);
+            _com.Parameters.AddWithValue("@VoterStats", cmbx_vs.Text);
+            _com.Parameters.AddWithValue("@PrecintNo", txt_precint.Text);
+            _com.Parameters.AddWithValue("@Purok", cmbx_purok.Text);
+            _com.Parameters.AddWithValue("@Occupation", txt_occ.Text);
+            _com.Parameters.AddWithValue("@Address", txt_address.Text);
+            _com.Parameters.AddWithValue("@Category", txt_cat.Text);
+            _com.Parameters.AddWithValue("@HouseNo", txt_house.Text);
+            _com.Parameters.AddWithValue("@Status", txt_stats.Text);
+            _com.Parameters.AddWithValue("@img", arrImage);
+            _com.Parameters.AddWithValue("@id", _id);
+
+            _com.ExecuteNonQuery();
+            _con.Close();
+
+            MessageBox.Show("Resident Info has been saved successfully", declares._title + "[SYSTEM]", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            new_form.Load_data();
+        }
+
+        /// 
+        /// </summary>
         public void load_purok()
         {
             try
@@ -110,6 +208,7 @@ namespace isoy_bamis
                 MessageBox.Show(ex.Message, declares._title + "[ERROR]", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
             }
         }
+
         private void frm_res_details_Load(object sender, EventArgs e)
         {
            
@@ -140,6 +239,18 @@ namespace isoy_bamis
         private void button3_Click(object sender, EventArgs e)
         {
             ClearControls();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            res_Update();
+        }
+
+        private void dp_birth_ValueChanged(object sender, EventArgs e)
+        {
+            DateTime t = DateTime.Today;
+            int age = t.Year - dp_birth.Value.Year;
+            txt_age.Text = age.ToString();
         }
     }
 }

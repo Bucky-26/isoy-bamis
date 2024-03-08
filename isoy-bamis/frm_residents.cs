@@ -64,17 +64,16 @@ namespace isoy_bamis
                     new_res.pictureBox1.Image = bitmap;
 
                     new_res.ShowDialog();
+                 
                 }
+                con.Close();
+                record_reader.Close();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, declares._title + "[ERROR]", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            finally
-            {
-                record_reader?.Close();
-                con?.Close();
-            }
+            
         }
 
 
@@ -128,5 +127,30 @@ namespace isoy_bamis
 
 
         }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+         
+        }
+        public string resTotal()
+        {
+            try
+            {
+                con.Open();
+                com = new SqlCommand("Select Count(*) From _RESIDENTS", con);
+                string total = com.ExecuteScalar().ToString();
+                return total;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, declares._title + "[error]", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                return "0";
+            }
+            finally
+            {
+                con.Close(); // Ensure the connection is closed in all cases
+            }
+        }
+
     }
 }

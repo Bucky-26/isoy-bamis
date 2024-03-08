@@ -225,5 +225,34 @@ namespace isoy_bamis
                 }
             
         }
+
+        private void metroTextBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            string searchText = textBox1.Text.Trim();
+
+            if (string.IsNullOrEmpty(searchText)) // Handle empty search text
+            {
+                load_data();
+                return;
+            }
+
+            con.Open();
+            dataGridView1.Rows.Clear();
+            com = new SqlCommand("SELECT * FROM TBL_OFFICIALS WHERE NAME LIKE @name", con);
+            com.Parameters.AddWithValue("@name", "%" + searchText + "%"); // Partial match search
+            dataread = com.ExecuteReader();
+            while (dataread.Read())
+            {
+                dataGridView1.Rows.Add(dataread[0].ToString(), dataread[1].ToString(), dataread[2].ToString(), dataread[3].ToString(), DateTime.Parse(dataread[4].ToString()).ToShortDateString(), DateTime.Parse(dataread[5].ToString()).ToShortDateString(), dataread[6].ToString());
+            }
+            con.Close();
+            dataread.Close();
+        }
+
     }
 }

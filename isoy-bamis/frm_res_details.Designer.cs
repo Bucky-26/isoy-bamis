@@ -242,6 +242,7 @@ namespace isoy_bamis
             this.dp_birth.Name = "dp_birth";
             this.dp_birth.Size = new System.Drawing.Size(223, 23);
             this.dp_birth.TabIndex = 16;
+            this.dp_birth.ValueChanged += new System.EventHandler(this.dp_birth_ValueChanged);
             // 
             // label10
             // 
@@ -514,6 +515,7 @@ namespace isoy_bamis
             this.button2.TabIndex = 48;
             this.button2.Text = "UPDATE";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
